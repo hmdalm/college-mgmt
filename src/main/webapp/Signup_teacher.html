@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<h2 align="center">Create new Teacher's Account </h2>
+	<p align="center" background-color ="#ABBAEA;" >
+		<b>Please enters the following details :</b>
+	</p>
+	<form action="/college-mgmt/HomeServletTeacher" method="post" align="center" >
+	
+	
+		<lable for="fname"> <b>First Name :</b></lable>
+		
+		<input type="text" onkeypress="return allowedKey(event)" placeholder="First Name" name="fname" id= "fname01"  required><br><br>
+		<lable for="midname"> <b>Middle Name :</b></lable>
+		
+		<input type="text" onkeypress="return allowedKey(event)" placeholder="Middle Name" name="mid" id= "mid01" required><br><br>
+		
+		<lable for="lname"> <b>Last Name :</b></lable>
+		<input type="text" onkeypress="return allowedKey(event)" placeholder="Last Name" name="lname" id= "lname02" required><br><br>
+		
+		
+		<lable for="dob"> <b>Date of Birth :</b></lable>
+		<input type="date" placeholder="DOB" name="dob"  id= "dobstd" required><br><br>
+		
+		<lable for="coid"> <b>Department</b></lable>
+<select name="depart" id="depart1">
+  <option value="none">--NONE--</option>
+
+  <option value="mech">Mechanical Engineering</option>
+  <option value="elect">Electrical Engineering</option>
+  <option value="ece">Electronic Engineering</option>
+  <option value="civil">Civil Engineering</option>
+    <option value="computer">Information Engineering</option>
+  
+    <option value="bba">BBA</option>
+        <option value="mba">MBA</option>
+            <option value="bca">BCA</option>
+                    <option value="mca">MCA</option>
+        
+    
+  
+</select>		<br><br>
+<lable for="qualif"> <b>Qualification :</b></lable>
+		<input type="text" placeholder="Qualification" name="qualif"  id= "qualif" required><br><br>
+		
+		<lable for="mobile"> <b>Mobile Number :</b></lable>
+		<input type="text" placeholder="Mobile" name="mobile"  id= "mob01"  pattern="[1-9]{1}[0-9]{9}" title="Please enter exactly 10 digits"required><br><br>
+		<lable for="add"> <b>Address :</b></lable>
+		<input type="text" placeholder="Address" name="add"  id= "add01"  required><br><br>
+		
+		<label for="email"><b>Email Id :</b></label> <input type="email"
+			placeholder="Email" name="email"  id= "email01"required><br>
+		<br> <label for="pwrd"><b>Password :</b></label> <input
+			type="password" placeholder="Enter password" name="pword" id= "pwd01" required><br><br>
+		<label for="pwrd"><b>Confirm Password :</b></label> <input
+			type="password" placeholder="Enter password" name="confirmPwd" id= "pwd02"
+			required> <br><br>
+			<label for="type"><p>                
+		<p>
+			<b>Click on 'Submit' for create account<b><p>
+						<input type="submit" name="Submit" >
+	</form>
+<script>
+
+function allowedKey(e){
+    var k;
+   
+       k = e.keyCode;
+       if(k>=65 && k<=90 || k>=97 && k<=122){
+    	   
+       }
+       
+     else
+    {
+       alert('only alphabatic value allowed')
+ }
+
+} 
+function passwordNotmatched(){
+	if(document.getElementById("pwd01").value ==
+		document.getElementById("pwd02").value){
+		alert('password matched')
+		return true; 
+} 
+else {
+	
+	alert('password not matched');
+	return false;
+
+}}
+
+</script>
+
+</body>
+
+</html>

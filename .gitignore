@@ -4,3 +4,5 @@
 .settings/
 *.class
 .project
+build/classes/com/resource/alert.txt
+.target/.

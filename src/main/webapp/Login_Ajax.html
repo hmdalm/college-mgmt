@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Login Page</h1>
+	<p>
+		<b>Please enters your user_id & password<b></b>
+	</p>
+	<form>
+
+		<label for="userID">Email ID :</label> <input type="text"
+			placeholder="Email ID" name="email" id="email" required><br>
+		<br> <label for="password">Password :</label> <input
+			type="password" placeholder="Password" name="pass" id="pass" required><br>
+		<br> <input type="hidden" name="json" id="json" value="yes"
+			required>
+
+		<p>
+			<b>Click on 'Login' for Login<b><p>
+						<button type="button" name="login" id="login"
+							onclick="userLogin()">Login</button>
+	</form>
+
+	<script>
+		function userLogin() {
+
+			var email = document.getElementById("email").value
+			var pass = document.getElementById("pass").value
+			var json = document.getElementById("json").value
+
+		//	alert("email : " + email + " pass : " + pass + " json : " + json);
+
+			// To set HTML field value
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+					//alert(this.responseText)
+					drawTable(this.responseText);
+				}
+			};
+			xhttp
+					.open("GET",
+							"http://localhost:8081/college-mgmt/login?email="
+									+ email + "&" + "pass=" + pass + "&"
+									+ "json=" + json, true);
+			xhttp.send();
+		}
+		
+		function drawTable(test) {
+      //alert(test)
+     	
+      const obj = JSON.parse(test);
+			
+			
+			  var body = document.getElementsByTagName("body")[0];
+			  // create elements <table> and a <tbody>
+			  var tbl = document.createElement("table");
+			  var tblBody = document.createElement("tbody");
+			
+			 
+				    
+				  
+		var row1 = document.createElement("tr");
+			var tdKey1 = document.createElement("td");
+			var tdValue1 = document.createElement("td");
+			var tdKeyData1 = document.createTextNode("firstName");
+			var tdValueData1 = document.createTextNode(obj.firstName);
+			
+			tdKey1.appendChild(tdKeyData1);
+			tdValue1.appendChild(tdValueData1);
+			row1.appendChild(tdKey1)
+			row1.appendChild(tdValue1)
+			tblBody.appendChild(row1);
+			
+			var row2 = document.createElement("tr");
+			var tdKey2 = document.createElement("td");
+			var tdValue2 = document.createElement("td");
+			var tdKeyData2 = document.createTextNode("middleName");			
+			var tdValueData2 = document.createTextNode(obj.middleName);
+			tdKey2.appendChild(tdKeyData2);
+			tdValue2.appendChild(tdValueData2);			
+			row2.appendChild(tdKey2)
+			row2.appendChild(tdValue2)
+			tblBody.appendChild(row2);
+			
+			var row3 = document.createElement("tr");
+			var tdKey3 = document.createElement("td");
+			var tdValue3 = document.createElement("td");
+			var tdKeyData3 = document.createTextNode("lastName");			
+			var tdValueData3 = document.createTextNode(obj.lastName);
+			tdKey3.appendChild(tdKeyData3);
+			tdValue3.appendChild(tdValueData3);			
+			row3.appendChild(tdKey3)
+			row3.appendChild(tdValue3)
+			tblBody.appendChild(row3);
+			
+			var row4 = document.createElement("tr");
+			var tdKey4 = document.createElement("td");
+			var tdValue4 = document.createElement("td");
+			var tdKeyData4 = document.createTextNode("dob");			
+			var tdValueData4 = document.createTextNode(obj.dob);
+			tdKey4.appendChild(tdKeyData4);
+			tdValue4.appendChild(tdValueData4);			
+			row4.appendChild(tdKey4)
+			row4.appendChild(tdValue4)
+			tblBody.appendChild(row4);
+			
+			var row5 = document.createElement("tr");
+			var tdKey5 = document.createElement("td");
+			var tdValue5 = document.createElement("td");
+			var tdKeyData5 = document.createTextNode("rollNo");			
+			var tdValueData5 = document.createTextNode(obj.rollNo);
+			tdKey5.appendChild(tdKeyData5);
+			tdValue5.appendChild(tdValueData5);			
+			row5.appendChild(tdKey5)
+			row5.appendChild(tdValue5)
+			tblBody.appendChild(row5);
+			
+			var row6 = document.createElement("tr");
+			var tdKey6 = document.createElement("td");
+			var tdValue6 = document.createElement("td");
+			var tdKeyData6 = document.createTextNode("course");			
+			var tdValueData6 = document.createTextNode(obj.course);
+			tdKey6.appendChild(tdKeyData6);
+			tdValue6.appendChild(tdValueData6);			
+			row6.appendChild(tdKey6)
+			row6.appendChild(tdValue6)
+			tblBody.appendChild(row6);
+
+			var row7 = document.createElement("tr");
+			var tdKey7 = document.createElement("td");
+			var tdValue7 = document.createElement("td");
+			var tdKeyData7 = document.createTextNode("address");			
+			var tdValueData7 = document.createTextNode(obj.address);
+			tdKey7.appendChild(tdKeyData7);
+			tdValue7.appendChild(tdValueData7);			
+			row7.appendChild(tdKey7)
+			row7.appendChild(tdValue7)
+			tblBody.appendChild(row7);
+			
+			
+			
+			var row9 = document.createElement("tr");
+			var tdKey9 = document.createElement("td");
+			var tdValue9 = document.createElement("td");
+			var tdKeyData9 = document.createTextNode("email");			
+			var tdValueData9 = document.createTextNode(obj.email);
+			tdKey9.appendChild(tdKeyData9);
+			tdValue9.appendChild(tdValueData9);			
+			row9.appendChild(tdKey9)
+			row9.appendChild(tdValue9)
+			tblBody.appendChild(row9);
+			
+			var row10 = document.createElement("tr");
+			var tdKey10 = document.createElement("td");
+			var tdValue10 = document.createElement("td");
+			var tdKeyData10 = document.createTextNode("mobile");			
+			var tdValueData10 = document.createTextNode(obj.mobile);
+			tdKey10.appendChild(tdKeyData10);
+			tdValue10.appendChild(tdValueData10);			
+			row10.appendChild(tdKey10)
+			row10.appendChild(tdValue10)
+			tblBody.appendChild(row10);
+			
+			var row11 = document.createElement("tr");
+			var tdKey11 = document.createElement("td");
+			var tdValue11 = document.createElement("td");
+			var tdKeyData11 = document.createTextNode("studentId");			
+			var tdValueData11 = document.createTextNode(obj.studentId);
+			tdKey11.appendChild(tdKeyData11);
+			tdValue11.appendChild(tdValueData11);			
+			row11.appendChild(tdKey11)
+			row11.appendChild(tdValue11)
+			tblBody.appendChild(row11);
+						
+
+			// add table body in the table
+			tbl.appendChild(tblBody);
+
+			// Add table in the ebody
+			body.appendChild(tbl);
+			
+		}
+	</script>
+
+</body>
+</html>
