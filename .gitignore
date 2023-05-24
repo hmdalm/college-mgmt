@@ -1,0 +1,6 @@
+
+.classpath
+.gitattributes
+.settings/
+*.class
+.project
