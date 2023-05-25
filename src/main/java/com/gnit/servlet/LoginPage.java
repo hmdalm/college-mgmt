@@ -54,6 +54,7 @@ public class LoginPage extends HttpServlet {
 		LoginDO logindo = ldao.getUser(email, pass);
 
 		String userType = logindo.getUserType();
+		
 		System.out.println("type---" + userType);
 
 		System.out.println(email + "      " + pass);
@@ -76,7 +77,7 @@ public class LoginPage extends HttpServlet {
 						// Displaying Java object into a JSON string
 						System.out.println("jsonStr" + jsonStr);
 
-						System.out.println(jsonStr);
+					//	System.out.println(jsonStr);
 						out.print(jsonStr);
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -126,6 +127,7 @@ public class LoginPage extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
+		System.out.println("doPost  method Executed");
 	}
 
 }

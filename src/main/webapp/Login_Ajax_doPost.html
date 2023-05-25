@@ -43,8 +43,11 @@
 					drawTable(this.responseText);
 				}
 			};
-			xhttp.open("GET","http://localhost:8081/college-mgmt/login?email="+ email + 
-					"&" + "pass=" + pass + "&"+ "json=" + json, true);
+			xhttp
+					.open("POST",
+							"http://localhost:8081/college-mgmt/login?email="
+									+ email + "&" + "pass=" + pass + "&"
+									+ "json=" + json, true);
 			xhttp.send();
 		}
 		

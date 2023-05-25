@@ -41,15 +41,15 @@ public class TeacherServlet extends HttpServlet {
 			out.print("<p>Displaying the details of the Teacher given below :</p>");
 			out.print("<p>Teacher ID :"+ tdo.getTeacherId()+"</p>");
 
-			out.print("<p>Student First Name :"+ tdo.getFirstName()+"</p>");
-			out.print("<p>Student Middle Name :"+ tdo.getMiddleName()+"</p>");
-			out.print("<p>Student Last Name :"+ tdo.getLastName()+"</p>");
-			out.print("<p>Student Date of Birth :"+ tdo.getDob()+"</p>");
-			out.print("<p>Student Department :"+ tdo.getDepartment()+"</p>");
-			out.print("<p>Student Qualification :"+ tdo.getQualification()+"</p>");
-			out.print("<p>Student Address :"+ tdo.getAddress()+"</p>");
-			out.print("<p>Student Email ID :"+ tdo.getEmail()+"</p>");
-			out.print("<p>Student Mobile Number :"+ tdo.getMobile()+"</p>");
+			out.print("<p>Teacher First Name :"+ tdo.getFirstName()+"</p>");
+			out.print("<p>Teacher Middle Name :"+ tdo.getMiddleName()+"</p>");
+			out.print("<p>Teacher Last Name :"+ tdo.getLastName()+"</p>");
+			out.print("<p>Teacher Date of Birth :"+ tdo.getDob()+"</p>");
+			out.print("<p>Teacher Department :"+ tdo.getDepartment()+"</p>");
+			out.print("<p>Teacher Qualification :"+ tdo.getQualification()+"</p>");
+			out.print("<p>Teacher Address :"+ tdo.getAddress()+"</p>");
+			out.print("<p>Teacher Email ID :"+ tdo.getEmail()+"</p>");
+			out.print("<p>Teacher Mobile Number :"+ tdo.getMobile()+"</p>");
 			
 			out.print("<a href=\"update_teacher.html\"><b>update your details </b></a>");
 		    
