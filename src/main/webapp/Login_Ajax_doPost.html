@@ -43,12 +43,19 @@
 					drawTable(this.responseText);
 				}
 			};
+			
+			let postObj = { 
+				    id: 1, 
+				    title: "What is AJAX", 
+				    body: "AJAX stands for Asynchronous JavaScript..."
+				}
+			let post = JSON.stringify(postObj)
+
 			xhttp
 					.open("POST",
-							"http://localhost:8081/college-mgmt/login?email="
-									+ email + "&" + "pass=" + pass + "&"
-									+ "json=" + json, true);
-			xhttp.send();
+							"http://localhost:8081/college-mgmt/login", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp.send("email="+email+"&pass="+pass+"&json="+json);
 		}
 		
 		function drawTable(test) {

@@ -62,7 +62,7 @@ public class HomeServlet extends HttpServlet {
 		System.out.println("pword  : " + pass);
 		System.out.println("confirmPwd : " + confpass);
 
-		StudentDAO signup = new StudentDAO();
+		//StudentDAO signup = new StudentDAO();
 
 		//boolean ans = signup.getSignupDetail(email);
 		/*

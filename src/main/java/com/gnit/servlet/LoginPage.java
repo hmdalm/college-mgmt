@@ -2,6 +2,7 @@ package com.gnit.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,7 +48,9 @@ public class LoginPage extends HttpServlet {
 		String email = request.getParameter("email");
 		String pass = request.getParameter("pass");
 		String json = request.getParameter("json");
-
+System.out.println("GET PARAMETERS" + request.getContentLength());
+Map<String, String[]> aa =request.getParameterMap();
+System.out.println(aa.size());
 		System.out.println(email + "~~~" + pass + "~~~" + json);
 
 		LoginDAO ldao = new LoginDAO();
@@ -126,8 +129,9 @@ public class LoginPage extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
 		System.out.println("doPost  method Executed");
+		doGet(request, response);
+		
 	}
 
 }

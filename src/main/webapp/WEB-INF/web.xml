@@ -4,4 +4,12 @@
   <welcome-file-list>
     <welcome-file>college_home.html</welcome-file>
   </welcome-file-list>
+<!--   <filter> -->
+<!-- 	<filter-name>filter1</filter-name> -->
+<!-- 	<filter-class>com.filtering</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>filter1</filter-name> -->
+<!-- 	<url-pattern>/filter</url-pattern> -->
+<!-- 	</filter-mapping> -->
 </web-app>
